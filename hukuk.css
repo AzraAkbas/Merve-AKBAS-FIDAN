@@ -1,0 +1,253 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: rgb(21, 11, 99);
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 60px;
+  background-color: rgba(0,0,0,0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+header nav a {
+  color: rgb(166, 133, 61);
+  text-decoration: none;
+  margin-left: 30px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+header nav a:hover {
+  color: rgb(177, 154, 51);
+  text-decoration: underline;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 750px;
+  overflow: hidden;
+}
+
+.hero-container > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Georgia", serif;
+  z-index: 500;
+  white-space: pre;
+}
+
+.hero-text .small-line {
+  font-size: 22px;
+}
+
+.hero-text div {
+  margin-bottom: 10px;
+}
+
+.hero-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: fall 1.2s forwards;
+}
+
+@keyframes fall {
+  0% { opacity: 0; transform: translateY(-40px); }
+  50% { opacity: 0.5; transform: translateY(60px); }
+  100% { opacity: 1; transform: translateY(120px); }
+}
+
+section {
+  padding: 30px;
+}
+
+section h3 {
+  margin-left: 70px;
+  font-weight: bold;
+}
+
+section p {
+  margin-left: 70px;
+}
+
+.about-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.about-container img {
+  flex-shrink: 0;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+  .about-container img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.alan {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 10px;
+  margin-left: 60px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.alan .card {
+  flex: 0 0 300px;
+}
+
+.alan div {
+  flex: 1;
+}
+
+.baslik {
+  margin-left: 100px;
+  font-weight: bold;
+}
+
+.alan-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.card {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #a68b3d, #b19a33);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 14px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  background: linear-gradient(135deg, #b19a33, #d4c27a);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.slider-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.slider-btn.left {
+  left: -20px;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.slider-btn.right {
+  right: 40px;
+  font-size: 22px;
+  padding: 10px;
+}
+
+.resim {
+  height: 32px;
+}
+
+footer {
+  height: 350px;
+  background-color: rgb(202, 189, 162);
+  padding: 20px;
+}
+
+footer h3 {
+  margin-left: 80px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+footer p {
+  text-align: center;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+  font-size: 28px;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.contact-item span {
+  font-size: 28px;
+  color: #333;
+}
+
+.contact-item p {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.contact-item img.resim {
+  height: 32px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(21, 11, 99);
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: rgb(56, 43, 151);
+}
