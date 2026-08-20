@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# XML Site Haritası Konumu
+Sitemap: https://merveakbasfidan.av.tr/sitemap.xml
